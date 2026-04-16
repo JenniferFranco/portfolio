@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+
+    --fuente-texto: "Montserrat", serif;
+    --fuente-titulo: "Krona One", serif;
+}
+
+* {
+    padding: 0;
+    margin:0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.header{
+    padding: 2% 0 0 10%;
+
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+    font-family: var(--fuente-texto);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.header__menu__link:hover {
+    color: var(--color-secundario); 
+    text-shadow: 0 0 10px var(--color-terciario), 0 0 20px var(--color-terciario); 
+    transform: translateY(-2px); 
+}
+
+.presentacion {
+    padding: 6% 10% 2% 10%;;
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    align-items: stretch; 
+    gap: 50px;
+}
+
+.presentacion__contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contenedor-secciones {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 6% 10%; 
+}
+
+.presentacion__contenido__titulo{
+    font-size: 2.5rem;
+    font-family: var(--fuente-titulo);
+}
+
+.presentacion__contenido__subtitulo{
+    font-size: 1.9rem;
+    font-family: var(--fuente-titulo);
+    color: var(--color-terciario);
+}    
+
+.titulo-destaque {
+    color: var(--color-terciario);
+}
+
+.presentacion__contenido__texto{
+    font-size: 1.35rem;
+    font-family: var(--fuente-texto);
+}
+
+.presentacion__enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion__enlaces__subtitulo{
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion__enlaces__link {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-texto);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.presentacion__enlaces__link:hover {
+    background-color: var(--color-hover);
+}
+
+.presentacion__imagen {
+    width: 100%;
+    flex-grow: 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.presentacion__columna-imagen {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    align-items: center;
+}
+
+.boton-cv-principal{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
+    padding: 24px;
+    text-align: center;
+    font-family:var(--fuente-titulo);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.seccion-tecnologias {
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;  
+    padding: 3% 10%; 
+    gap: 35px; 
+}
+
+.tecnologias__titulo-contenedor {
+    background-color: transparent; 
+    padding: 0;
+}
+
+.tecnologias__titulo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem; 
+    font-weight: 600;
+    margin: 0; 
+}
+
+.tecnologias__iconos-contenedor {
+    padding: 50px; 
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center; 
+    gap: 80px; 
+    width: 100%; 
+    box-shadow: 0 0 20px rgba(34, 212, 253, 0.3); 
+    overflow-x: auto;
+}
+
+.tecnologia-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; 
+    color: var(--color-primario); 
+    font-family: var(--fuente-texto);
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.tecnologia-item img {
+    width: 80px; 
+    height: 80px;
+    object-fit: contain; 
+    
+}
+
+.tecnologia-item:hover img {
+    transform: translateY(-10px) scale(1.1);
+}
+
+.proyectos__contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px; 
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto;
+
+}
+
+.proyecto-card {
+    border: 1px solid var(--color-terciario); 
+    border-radius: 12px;
+    overflow: hidden; 
+    background-color: #0d1117;
+    gap: 15px;
+    padding-bottom: 15px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.proyecto-card__imagen {
+    width: 100%; 
+    height: 230px; 
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.proyecto-card__titulo {
+    font-family: var(--fuente-titulo);
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-terciario); 
+}
+
+.proyecto-card__descripcion {
+    font-family: var(--fuente-texto);
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-secundario); 
+    flex-grow: 1; 
+}
+
+.proyecto-card__enlaces {
+    display: flex;
+    justify-content: center;
+}
+
+.proyecto-card__link {
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-terciario);       
+    border: 2px solid var(--color-terciario); 
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    
+}
+
+.proyecto-card__link:hover {
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
+}
+
+
+@media (max-width: 1200px) {
+
+    .header {
+        padding: 10%;
+    }
+    .header__menu{
+        justify-content: center;
+    }
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion__contenido {
+        width: auto;
+        padding: 0; 
+    }
+    .contenedor-secciones {
+        padding: 10% 5%; 
+    }
+    .presentacion__contenido {
+        width: auto;
+    }
+    .presentacion .presentacion__contenido {
+        width: auto;
+    }
+
+    .proyectos__contenedor {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 40px; 
+    }
+    
+    .proyecto-card {
+        width: 90%;
+        flex-basis: auto; 
+    }
+}
+
+
+
+
+/* --- AJUSTES PARA MOBILE (RESPONSIVE) --- */
+
+/* --- CONFIGURACIÓN PARA MÓVILES (iPhone 12 Pro y similares) --- */
+@media (max-width: 768px) {
+    
+    /* 1. RESET DE DESBORDAMIENTO: Evita el scroll lateral */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* Ajuste de contenedores generales */
+    .presentacion, .contenedor-secciones, .proyecto, .seccion-tecnologias {
+        padding: 10% 5% !important; /* Reducimos el margen lateral para ganar espacio */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 2. MENÚ EN COLUMNA (Sin JS) */
+    .header {
+        padding: 20px 0;
+    }
+
+    .header__menu {
+        flex-direction: column; /* Los links se ponen uno abajo del otro */
+        gap: 15px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header__menu__link {
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(34, 212, 253, 0.2); /* Línea divisoria sutil */
+        width: 80%;
+        padding-bottom: 5px;
+    }
+
+    /* 3. PRESENTACIÓN Y PÁRRAFOS: Evita que el texto se corte */
+    .presentacion {
+        display: flex;
+        flex-direction: column-reverse; /* Imagen arriba, texto abajo */
+        gap: 20px;
+    }
+
+    .presentacion__contenido__titulo {
+        font-size: 1.6rem;
+        word-wrap: break-word;
+    }
+
+    .presentacion__contenido__subtitulo {
+        font-size: 1.2rem;
+    }
+
+    .presentacion__contenido__texto {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: left; /* Mejor legibilidad en móvil */
+    }
+
+    /* 4. ICONOS DE TECNOLOGÍAS: 2 por fila exactos */
+    .tecnologias__iconos-contenedor {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Crea dos columnas iguales */
+        gap: 30px;
+        padding: 20px 10px;
+        justify-items: center;
+        box-shadow: none; /* Quitamos sombras pesadas en móvil */
+    }
+
+    .tecnologia-item {
+        font-size: 0.9rem;
+    }
+
+    .tecnologia-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* 5. PROYECTOS: Cards completas y legibles */
+    .proyectos__contenedor {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 0;
+    }
+
+    .proyecto-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 10px;
+    }
+
+    .proyecto-card__imagen {
+        height: 180px; /* Reducimos altura para que no ocupe toda la pantalla */
+    }
+
+    .proyecto-card__descripcion {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .proyecto-card__link {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    /* Botón CV Principal */
+    .presentacion__enlaces__link {
+        font-size: 1.1rem;
+        padding: 15px 0;
+    }
+}
+
+/* Ajuste extremo para pantallas menores a 360px */
+@media (max-width: 360px) {
+    .presentacion__contenido__titulo {
+        font-size: 1.4rem;
+    }
+    .header__menu__link {
+        font-size: 0.9rem;
+    }
+}

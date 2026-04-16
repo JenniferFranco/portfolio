@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Proyecto - IBM HR</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/proyecto.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__menu">
+            <a class="header__menu__link" href="index.html">Volver al Home</a>
+        </nav>
+    </header>
+
+    <main class="proyecto">
+        <h1 class="proyecto__titulo">Análisis de People Analytics: Factores Críticos en la Retención de Talento</h1>
+
+        <section class="proyecto__introduccion">
+            <p class="proyecto__texto">
+                Este reporte detalla el proceso de transformación de datos y los hallazgos estratégicos obtenidos tras
+                el análisis del dataset de IBM, con el fin de optimizar la toma de decisiones en el área de Capital
+                Humano</p>
+        </section>
+
+        <section class="proyecto__visualizaciones">
+            <h2 class="proyecto__subtitulo">Exploración Visual del Dataset</h2>
+
+            <p class="proyecto__texto">Este dashboard interactivo fue diseñado para ofrecer una navegación intuitiva y
+                una exploración profunda de los datos. Mediante el uso de botones de navegación por páginas y filtros
+                cruzados, el usuario puede transitar desde un diagnóstico macro de la compañía hasta un análisis
+                detallado de factores críticos. <br>
+                La interfaz permite segmentar dinámicamente cada indicador por variables demográficas y roles
+                específicos, facilitando el descubrimiento de patrones de rotación que quedarían ocultos en un reporte
+                estático.</p>
+                
+            <div class="proyecto__grafico-bloque">
+                <h3 class="grafico-titulo grafico-titulo--izquierda">Diagnóstico General</h3>
+                <div class="proyecto__grafico-contenedor proyecto__grafico-contenedor--flexible">
+                    <img src="./assets/dashboard_ibm/diagnostico_general_ibm.png" alt="Diagnóstico General"
+                        class="proyecto__img-dashboard">
+                </div>
+                <p class="proyecto__interpretacion">
+                    Vista macro de la demografía organizacional. Este panel permite desglosar la rotación (16,12%) según
+                    dimensiones clave como el nivel educativo, género, estado civil y estabilidad bajo el mismo manager.
+                    El análisis inicial identifica al departamento de Ventas como el área de mayor riesgo (20,63% de
+                    bajas), estableciendo el punto de partida para una investigación segmentada.
+                </p>
+            </div>
+
+            <div class="proyecto__grafico-bloque">
+                <h3 class="grafico-titulo grafico-titulo--izquierda">El Núcleo del Problema (Factores de Salida)</h3>
+                <div class="proyecto__grafico-contenedor proyecto__grafico-contenedor--flexible">
+                    <img src="./assets/dashboard_ibm/fuga_talento_ibm.png" alt="Fuga de Talento"
+                        class="proyecto__img-dashboard">
+                </div>
+                <p class="proyecto__interpretacion">
+                    Identificación de disparidades críticas: el análisis revela una correlación inversa entre el salario
+                    promedio y la rotación. El rol de Sales Representative no solo percibe los ingresos más bajos, sino
+                    que presenta la mayor vulnerabilidad, especialmente cuando se combina con la incidencia de horas
+                    extras, que actúa como el principal catalizador de desvinculaciones.
+                </p>
+            </div>
+
+            <div class="proyecto__grafico-bloque">
+                <h3 class="grafico-titulo grafico-titulo--izquierda">Aplicación de Filtros Cruzados (Zoom en Ventas)
+                </h3>
+                <div class="proyecto__grafico-contenedor proyecto__grafico-contenedor--flexible">
+                    <img src="./assets/dashboard_ibm/fuga_talentos_filter_sales_ibm.png" alt="Filtro Crítico en Sales"
+                        class="proyecto__img-dashboard">
+                </div>
+                <p class="proyecto__interpretacion">
+                    Análisis de filtros cruzados aplicado al sector de Ventas. Los datos revelan que la fuga de talentos
+                    no es uniforme: los roles operativos (Sales Representatives) tienen una rotación drásticamente
+                    superior a los cargos directivos. Esto permite a la empresa optimizar el presupuesto de retención,
+                    aplicando ajustes salariales o incentivos específicamente donde el costo de reemplazar personal es
+                    más alto.
+                </p>
+            </div>
+
+            <div class="proyecto__grafico-bloque">
+                <h3 class="grafico-titulo grafico-titulo--izquierda">Detalle de Factores Críticos (Satisfacción y
+                    Balance)</h3>
+                <div class="proyecto__grafico-contenedor proyecto__grafico-contenedor--flexible">
+                    <img src="./assets/dashboard_ibm/detalles_ibm.png" alt="Detalle de Factores Críticos"
+                        class="proyecto__img-dashboard">
+                </div>
+                <p class="proyecto__interpretacion">
+                    Cruce de variables cualitativas y cuantitativas. El dashboard integra métricas de Satisfacción
+                    Laboral y Balance Vida-Trabajo que fluctúan según el rol seleccionado. Al visualizar estos
+                    indicadores junto a la sobrecarga horaria, se localiza el 'punto de quiebre' donde el desgaste
+                    personal impacta directamente en la decisión de abandonar la compañía.
+                </p>
+            </div>
+        </section>
+
+        <section class="proyecto__metricas">
+            <h2 class="proyecto__subtitulo">Principales Métricas de Rotación</h2>
+            <div class="kpi-container">
+                <div class="kpi-card">
+                    <h3 class="kpi-card__titulo">Tasa Crítica</h3>
+                    <span class="kpi-card__valor">66.7%</span>
+                    <p class="kpi-card__descripcion">Máximo de rotación en Sales (Año 0-2).</p>
+                </div>
+                <div class="kpi-card">
+                    <h3 class="kpi-card__titulo">Puesto Crítico</h3>
+                    <span class="kpi-card__valor">Sales Rep</span>
+                    <p class="kpi-card__descripcion">Posición con mayor vulnerabilidad salarial.</p>
+                </div>
+                <div class="kpi-card">
+                    <h3 class="kpi-card__titulo">Detonante Principal</h3>
+                    <span class="kpi-card__valor">Overtime</span>
+                    <p class="kpi-card__descripcion">Incidencia directa de horas extra en la fuga.</p>
+                </div>
+                <div class="kpi-card">
+                    <h3 class="kpi-card__titulo">Estabilidad</h3>
+                    <span class="kpi-card__valor">+5 Años</span>
+                    <p class="kpi-card__descripcion">Punto de equilibrio en la retención por manager.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="proyecto__insights">
+            <h2 class="proyecto__subtitulo">Insights Claves</h2>
+            <div class="insight-group">
+                <div class="insight-group__item insight-group__item--primary">
+                    <p><strong>El Departamento y Puesto Crítico:</strong> El área de Sales (Ventas) es la más afectada,
+                        pero el análisis
+                        detectó que el puesto de Sales Representative es el foco de fuga más severo de toda la compañía,
+                        con tasas de rotación que duplican a otros roles.</p>
+                </div>
+
+                <div class="insight-group__item insight-group__item--secondary">
+                    <p><strong>El Factor Salarial:</strong> Se identificó una correlación directa entre los salarios más
+                        bajos de la
+                        escala y la intención de salida. Los empleados en posiciones de entrada, especialmente en
+                        Ventas, perciben ingresos que están por debajo del promedio de retención, lo que incentiva la
+                        fuga hacia la competencia. </p>
+                </div>
+
+                <div class="insight-group__item insight-group__item--dark">
+                    <p><strong>Horas Extra:</strong> La incidencia de Overtime actúa como el acelerador final. Los Sales
+                        Representatives con sueldos bajos y altas cargas de horas extra son la población de mayor riesgo
+                        de burnout y renuncia inmediata. </p>
+                </div>
+
+                <div class="insight-group__item insight-group__item--primary">
+                    <p><strong>Relación con el Management:</strong> La falta de estabilidad salarial y la sobrecarga
+                        horaria se agravan
+                        en los primeros 2 años de gestión de nuevos líderes, donde la rotación alcanza su punto máximo.
+                    </p>
+                </div>
+            </div>
+
+            <section class="proyecto__metodologia">
+                <h2 class="proyecto__subtitulo"> Desarrollo Técnico del Dashboard </h2>
+                <p class="proyecto__texto">Para este proyecto, no solo analicé los datos, sino que diseñé una interfaz
+                    de
+                    usuario (UI) funcional dentro de Power BI:</p>
+
+                <ul class="proyecto__lista">
+                    <li class="proyecto__lista-item"> <strong>Optimización de Datos:</strong>Transformamevariables
+                        críticas a formato
+                        binario
+                        (como BAJAS_NUM y GENDER_NUM con 1 y 0). Esto permitió cálculos de DAX más precisos y un
+                        rendimiento
+                        superior del reporte.</li>
+
+                    <li class="proyecto__lista-item"> <strong>Estructura del Dashboard:</strong> Se organizó en dos
+                        páginas estratégicas:
+                        <ul class="proyecto__lista">
+                            <li>Diagnóstico General: Radiografía de la distribución demográfica y salarial.</li>
+
+                            <li>Fuga de Talentos: El núcleo del análisis, donde identificamos los motivos reales de
+                                salida. </li>
+                        </ul>
+                    </li>
+
+                    <li class="proyecto__lista-item"> <strong>Lógica DAX Avanzada:</strong> Creé medidas que responden a
+                        los filtros
+                        cruzados,
+                        manteniendo la estabilidad del eje X incluso en muestras pequeñas como RRHH.</li>
+
+                    <li class="proyecto__lista-item"> <strong>Diseño UX:</strong> Configuré tooltips personalizados y
+                        una paleta de
+                        colores
+                        de alto contraste para facilitar la lectura de los puntos críticos de fuga de talento. Diseñe el
+                        lienzo en PowerPoint para lograr una estética personalizada, limpia y profesional.</li>
+                </ul>
+            </section>
+
+            <section class="proyecto__propuesta">
+                <h2 class="proyecto__subtitulo">Propuesta Estratégica </h2>
+                <p class="proyecto__texto">Basado en la evidencia, la recomendación para la gerencia es:</p>
+                <ul class="proyecto__lista">
+                    <li class="proyecto__lista-item"> <strong>Revisión Salarial en Ventas:</strong> Ajustar los sueldos
+                        base de los Sales
+                        Representatives para alinearlos con el mercado y reducir la dependencia de comisiones variables
+                        que generan inestabilidad.</li>
+
+                    <li class="proyecto__lista-item"> <strong>Reducción de Horas Extras:</strong> Implementar un límite
+                        estricto de
+                        Overtime en el área comercial.</li>
+
+                    <li class="proyecto__lista-item"><strong>Acompañamiento Temprano:</strong> Monitorear de cerca los
+                        primeros 24 meses
+                        de los empleados en este puesto crítico para intervenir antes de que se produzca la renuncia.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="proyecto__conclusion">
+                <h2 class="proyecto__subtitulo"> Conclusión </h2>
+                <p class="proyecto__texto">Este dashboard demuestra que la rotación no es un misterio, sino una
+                    consecuencia de factores medibles. Al unir Recursos Humanos con Análisis de Datos, logramos
+                    identificar exactamente quién se va (Sales Representatives), por qué (Sueldo y Horas Extra) y cómo
+                    evitarlo.</p>
+            </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Jennifer Franco</p>
+    </footer>
+</body>
+
+</html>

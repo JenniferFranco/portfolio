@@ -1,358 +1,169 @@
 <!DOCTYPE html>
-<html lang="es-mx">
-
+<html lang="es-AR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle Proyecto - Cancelaciones Hoteleras</title>
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/proyecto.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cancelaciones hoteleras | Jennifer Franco</title>
+  <meta name="description" content="Análisis exploratorio de 119.390 reservas hoteleras con Python para identificar los factores de cancelación.">
+  <meta name="theme-color" content="#5C2B50">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235C2B50'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='800' font-size='30' fill='%23C9D3BC' text-anchor='middle'%3EJF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,700..800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+  <link rel="stylesheet" href="./style/main.css">
 </head>
 
 <body>
-    <header class="header">
-        <nav class="header__menu">
-            <a class="header__menu__link" href="index.html">Volver al Home</a>
-        </nav>
-    </header>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
 
-    <main class="proyecto">
-        <h1 class="proyecto__titulo">
-            Optimización de Ingresos mediante el Análisis de Cancelaciones</h1>
-        <!-- <div class="contenedor__dashboard">
-            <p>[Aqui va el dashboard en power bi] </p>
-        </div> -->
+  <header class="encabezado">
+    <div class="contenedor encabezado__fila">
+      <a class="marca" href="./index.html" aria-label="Jennifer Franco, inicio">JF</a>
+      <nav class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="./index.html#proyectos">Proyectos</a></li>
+          <li><a href="./index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <section class="proyecto__introduccion">
-            <h2 class="proyecto__subtitulo">Contexto de Negocio y Objetivos del Análisis</h2>
-            <p class="proyecto__texto">
-                En la industria hotelera, una reserva no es un ingreso garantizado hasta el check-in. Este proyecto nace
-                de
-                la necesidad de mitigar el impacto financiero que generan las cancelaciones inesperadas, un desafío que
-                afecta directamente la planificación de recursos y la optimización de la ocupación.
-            </p>
-            <p class="proyecto__texto">
-                Para este análisis, procesé un ecosistema de <strong>119,390 registros individuales</strong> que abarcan
-                un horizonte temporal de dos años. Lejos de ser una lista estática, estos datos ofrecen una radiografía
-                del comportamiento del consumidor en dos escenarios contrastantes: el dinamismo corporativo de un
-                <strong>City Hotel</strong> y la estacionalidad recreativa de un <strong>Resort Hotel</strong>.
-            </p>
-            <p class="proyecto__texto">
-                Mi enfoque se centró en decodificar el "compromiso" del huésped. A través de la evaluación de variables
-                críticas como el <strong>Lead Time</strong> (anticipación de reserva), el origen del canal de venta y el
-                historial de comportamiento del cliente, logré identificar patrones de riesgo que permiten al hotel
-                transicionar de una postura reactiva a una estrategia proactiva de gestión de ingresos. </p>
-        </section>
+  <main id="contenido">
+    <section class="caso-hero" aria-labelledby="titulo-caso">
+      <div class="contenedor">
+        <a class="caso-hero__volver" href="./index.html#proyectos">Volver a proyectos</a>
+        <h1 id="titulo-caso" class="caso-hero__titulo">Cancelaciones hoteleras</h1>
+        <p class="bajada">Una reserva no es un ingreso hasta el check-in. Analicé dos años de reservas para encontrar qué anticipa una cancelación.</p>
 
-        <section class="proyecto__metricas">
-            <h2 class="proyecto__subtitulo">Principales Métricas</h2>
-            <div class="kpi-container">
-                <div class="kpi-card">
-                    <h3 class="kpi-card__titulo">Tasa General</h3>
-                    <span class="kpi-card__valor">37.3%</span>
-                    <p class="kpi-card__descripcion">Impacto global del problema</p>
-                </div>
-                <div class="kpi-card">
-                    <h3 class="kpi-card__titulo">City Hotel</h3>
-                    <span class="kpi-card__valor">41.9%</span>
-                    <p class="kpi-card__descripcion">Mayor volatilidad operativa</p>
-                </div>
-                <div class="kpi-card">
-                    <h3 class="kpi-card__titulo">Resort Hotel</h3>
-                    <span class="kpi-card__valor">28.0%</span>
-                    <p class="kpi-card__descripcion">Mayor estabilidad</p>
-                </div>
-                <div class="kpi-card">
-                    <h3 class="kpi-card__titulo">Lead Time Promedio</h3>
-                    <span class="kpi-card__valor">104 días</span>
-                    <p class="kpi-card__descripcion">Anticipación media de reserva</p>
-                </div>
-            </div>
-        </section>
+        <ul class="cifras">
+          <li class="cifra"><span class="cifra__valor">37,3 %</span><span class="cifra__texto">de las reservas terminan canceladas</span></li>
+          <li class="cifra"><span class="cifra__valor">41,9 %</span><span class="cifra__texto">tasa de cancelación del City Hotel</span></li>
+          <li class="cifra"><span class="cifra__valor">28,0 %</span><span class="cifra__texto">tasa de cancelación del Resort Hotel</span></li>
+          <li class="cifra"><span class="cifra__valor">104 días</span><span class="cifra__texto">de anticipación promedio de reserva</span></li>
+        </ul>
 
-        <section class="proyecto__insights">
-            <h2 class="proyecto__subtitulo">Insights Claves</h2>
-            <div class="insight-group">
-                <div class="insight-group__item insight-group__item--primary">
-                    <p><strong>El lead time como principal driver:</strong> A mayor anticipación en la reserva, mayor es
-                        la probabilidad de cancelación, consolidándose como el factor más determinante en el
-                        comportamiento del cliente.</p>
-                </div>
-                <div class="insight-group__item insight-group__item--secondary">
-                    <p><strong>Historial del Cliente:</strong> Los clientes con cancelaciones previas presentan una
-                        mayor probabilidad de cancelar nuevamente, evidenciando patrones de comportamiento repetitivos.
-                    </p>
-                </div>
-                <div class="insight-group__item insight-group__item--dark">
-                    <p><strong>Inconsistencia en políticas de depósito:</strong> Las reservas "Non Refund" presentan un
-                        comportamiento atípico con altas tasas de cancelación, lo que sugiere posibles inconsistencias
-                        en los datos o en la implementación de estas políticas.</p>
-                </div>
-                <div class="insight-group__item insight-group__item--primary">
-                    <p><strong>Indicadores de compromiso:</strong> A mayor cantidad de requerimientos especiales, menor
-                        es la probabilidad de cancelación, lo que sugiere que los clientes que personalizan su estadía
-                        presentan un mayor nivel de compromiso con la reserva.</p>
-                </div>
-                <div class="insight-group__item insight-group__item--secondary">
-                    <p><strong>Impacto del precio (ADR):</strong> No se observa una relación significativa entre el
-                        precio de la reserva y la probabilidad de cancelación, lo que indica que el costo no es un
-                        factor determinante en la decisión del cliente.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="proyecto__metodologia">
-            <h2 class="proyecto__subtitulo">Metodología y Refinamiento Técnico</h2>
-            <p class="proyecto__texto">
-                La integridad de este análisis descansa sobre un proceso riguroso de <strong>Data Sanitization</strong>.
-                No me limité a trabajar con los datos tal como venían; realicé una limpieza profunda para eliminar
-                ruidos y asegurar que cada visualización reflejara la realidad operativa del hotel. </p>
-            <h3 class="proyecto__item-titulo">1. Limpieza Estructural y Calidad de Datos</h3>
-            <ul class="proyecto__lista">
-                <li class="proyecto__lista-item"><strong>Optimización de Columnas:</strong> Eliminé la variable
-                    <code>company</code> debido a su
-                    altísimo
-                    porcentaje de datos ausentes, lo que permitía una estructura más limpia sin pérdida de información
-                    crítica.
-                </li>
-                <li class="proyecto__lista-item"><strong>Gestión de Nulos e Imputación:</strong> Para asegurar la
-                    continuidad del análisis,
-                    transformé
-                    los valores nulos en categorías legibles como <em>"Undefined"</em> o valores numéricos neutros (0),
-                    evitando errores en los cálculos de promedios.</li>
-                <li class="proyecto__lista-item"><strong>Tipado de Datos:</strong> Ajusté los tipos de datos (Castings)
-                    para optimizar el consumo de
-                    memoria y garantizar que las fechas y categorías funcionaran correctamente en las funciones de
-                    agregación.</li>
-            </ul>
-            <h3 class="proyecto__item-titulo">2. Depuración de Anomalías e Inconsistencias</h3>
-            <p class="proyecto__texto">
-                Apliqué filtros lógicos para eliminar registros que no representaban transacciones reales o contenían
-                errores de carga:
-            </p>
-            <ul class="proyecto__lista">
-                <li class="proyecto__lista-item"><strong>Filtros de Ocupación:</strong> Eliminé reservas con 0 adultos
-                    (inconsistencia operativa) y
-                    casos
-                    con un número inverosímil de ocupantes o espacios de estacionamiento.</li>
-                <li class="proyecto__lista-item"><strong>Saneamiento de Precios (ADR):</strong> Removí valores negativos
-                    y precios atípicos
-                    extremadamente altos que habrían sesgado cualquier métrica de ingresos.</li>
-                <li class="proyecto__lista-item"><strong>Criterio de Lead Time:</strong> A diferencia de otras
-                    variables, decidí <strong>conservar las reservas con alta anticipación</strong>. Aunque parezcan
-                    extremas, son casos lógicamente posibles y fundamentales para entender la volatilidad a largo plazo.
-                </li>
-            </ul>
-            <h3 class="proyecto__item-titulo">3. Enriquecimiento del Dataset (Feature Engineering)</h3>
-            <p class="proyecto__texto">
-                Para profundizar en el comportamiento del huésped, generé nuevas métricas que no existían en el dataset
-                original:
-            </p>
-            <ul class="proyecto__lista">
-                <li class="proyecto__lista-item"><strong>is_family:</strong> Segmentación binaria para diferenciar el
-                    comportamiento de grupos con niños frente a viajeros individuales o parejas.</li>
-                <li class="proyecto__lista-item"><strong>total_nights:</strong> Consolidación de estancias en días de
-                    semana y fines de semana para obtener el volumen real de pernoctación.</li>
-                <li class="proyecto__lista-item"><strong>is_free:</strong> Identificación de reservas con costo cero,
-                    permitiendo analizar el impacto de cortesías o convenios especiales en la tasa de cancelación.</li>
-            </ul>
-        </section>
-
-        <section class="visualizaciones__proyecto">
-            <h2 class="proyecto__subtitulo">Visualización de Hallazgos Críticos</h2>
-            <p class="proyecto__texto">A continuación, se presentan las métricas y tendencias más relevantes extraídas
-                del conjunto de datos. Este análisis visual permite identificar los patrones de comportamiento que
-                impactan directamente en la tasa de cancelación y la eficiencia operativa.</p>
-
-            <h3 class="seccion-header"> Contexto General</h3>
-            <div class="graficos-grid">
-                <div class="grafico-item">
-                    <p class="grafico-titulo">Distribución General de Cancelaciones</p>
-                    <div class="proyecto__grafico-contenedor">
-                        <iframe src="./assets/graficos_hotel/donas_cancelacion_total.html" width="100%" height="100%"
-                            frameborder="0"></iframe>
-                    </div>
-                    <p class="proyecto__interpretacion">Una proporción significativa de las reservas termina
-                        cancelándose.
-                        Esto confirma que la cancelación no es un fenómeno marginal sino un comportamiento frecuente
-                        dentro
-                        del negocio hotelero.</p>
-                </div>
-                <div class="grafico-item">
-                    <p class="grafico-titulo">Estado de Reserva según Tipo de Hotel</p>
-                    <div class="proyecto__grafico-contenedor">
-                        <iframe src="./assets/graficos_hotel/cancelaciones_por_tipo_hotel.html" width="100%" height="100%"
-                            frameborder="0"></iframe>
-                    </div>
-                    <p class="proyecto__interpretacion">El comportamiento de cancelación no es uniforme. Mientras que el
-                        City Hotel enfrenta una tasa de cancelación crítica del 41.92%, el Resort Hotel mantiene una
-                        operación más estable con un 27.99%.</p>
-                </div>
-            </div>
-
-            <h3 class="seccion-header"> Factores Claves</h3>
-            <p class="grafico-titulo">El Umbral de Anticipación (Lead Time)</p>
-            <div class="proyecto__grafico-contenedor">
-                <iframe src="./assets/graficos_hotel/lead_time.html" width="100%" height="100%" frameborder="0"></iframe>
-            </div>
-            <p class="proyecto__interpretacion">
-                Las reservas canceladas
-                presentan una anticipación mucho mayor, lo que sugiere que cuanto más tiempo permanece una reserva
-                "abierta", más oportunidades tiene el cliente de desistir.
-            </p>
-            <div class="graficos-grid">
-                <div class="grafico-item">
-                    <p class="grafico-titulo">Impacto de la Política de Depósitos en la Tasa de Cancelación</p>
-                    <div class="proyecto__grafico-contenedor">
-                        <iframe src="./assets/graficos_hotel/tipo_de_Deposito.html" width="100%" height="100%"
-                            frameborder="0"></iframe>
-                    </div>
-                    <p class="proyecto__interpretacion">
-                        El segmento "Non Refund" presenta una tasa de cancelación del 99%, comportamiento inverso al
-                        esperado en la industria. Este hallazgo sugiere inconsistencias en la captura de datos o fallas
-                        severas en la política comercial.
-                    </p>
-                </div>
-
-                <div class="grafico-item">
-                    <p class="grafico-titulo">Riesgo de Cancelación por Segmento de Mercado</p>
-                    <div class="proyecto__grafico-contenedor">
-                        <iframe src="./assets/graficos_hotel/segmento_de_mercado.html" width="100%" height="100%"
-                            frameborder="0"></iframe>
-                    </div>
-                    <p class="proyecto__interpretacion">
-                        El segmento "Undefined" registra una tasa de cancelación extremadamente alta (posibles
-                        inconsistencias). El segmento "Groups" también muestra una alta propensión a cancelar, superando
-                        ampliamente al resto, lo que podría estar asociado a la naturaleza de las reservas grupales, que
-                        suelen ser más volátiles y sujetas a cambios.
-                    </p>
-                </div>
-            </div>
-            <p class="grafico-titulo">Evolución Temporal de la Tasa de Cancelación</p>
-            <div class="proyecto__grafico-contenedor">
-                <iframe src="./assets/graficos_hotel/estacionalidad.html" width="100%" height="100%" frameborder="0"></iframe>
-            </div>
-            <p class="proyecto__interpretacion">
-                Al contrastar ambos hoteles, el City Hotel opera bajo una presión constante de cancelaciones, con una
-                base estructuralmente más alta y volátil que la del Resort Hotel.
-            </p>
-
-            <h3 class="seccion-header">Comportamiento del Cliente</h3>
-            <div class="graficos-grid">
-                <div class="grafico-item">
-                    <p class="grafico-titulo">Requerimientos Extras</p>
-                    <div class="proyecto__grafico-contenedor">
-                        <iframe src="./assets/graficos_hotel/requerimientos_extras.html" width="100%" height="100%"
-                            frameborder="0"></iframe>
-                    </div>
-                    <p class="proyecto__interpretacion">
-                        Existe una relación inversamente proporcional entre la personalización y la cancelación. Los
-                        huéspedes con 2 o más requerimientos especiales presentan una tasa de deserción notablemente más
-                        baja, consolidándose como el segmento de mayor compromiso y menor riesgo operativo para el
-                        hotel.
-                    </p>
-                </div>
-                <div class="grafico-item">
-                    <p class="grafico-titulo">Fidelización en la Tasa de Cancelación</p>
-                    <div class="proyecto__grafico-contenedor">
-                        <iframe src="./assets/graficos_hotel/tipo_cliente.html" width="100%" height="100%"
-                            frameborder="0"></iframe>
-                    </div>
-                    <p class="proyecto__interpretacion">
-                        Los clientes recurrentes presentan un comportamiento más estable en comparación con los clientes
-                        nuevos. Esto sugiere que la fidelización no solo tiene impacto en ingresos recurrentes, sino
-                        también en la reducción del riesgo de cancelación.</p>
-                </div>
-        </section>
-
-        <section class="proyecto__conclusion">
-            <h2 class="proyecto__subtitulo">Conclusión </h2>
-            <p class="proyecto__texto">
-                El análisis integral de las reservas demuestra que la cancelación no es un evento aleatorio, sino un
-                fenómeno con patrones predecibles y gestionables. Hemos identificado que la probabilidad de cancelación
-                está fuertemente traccionada por el tipo de depósito, el segmento de mercado y, críticamente, por el
-                lead time.</p>
-
-            <p class="proyecto__texto">
-                Un hallazgo clave es la relación entre la personalización y el compromiso: mientras que un alto tiempo
-                de anticipación eleva el riesgo, la presencia de requerimientos especiales o la reserva de
-                estacionamiento actúan como indicadores de una intención de viaje firme. Por el contrario, variables
-                demográficas como el tipo de grupo (familia vs. no familia) mostraron una influencia limitada en este
-                dataset.</p>
-
-            <p class="proyecto__texto">Finalmente, las inconsistencias detectadas en segmentos como "Undefined" y el
-                comportamiento atípico en tarifas "Non Refund" señalan áreas de mejora en la gobernanza de datos,
-                esenciales para refinar futuros modelos predictivos y evitar sesgos en la toma de decisiones. </p>
-
-            <h2 class="proyecto__subtitulo">Recomendaciones Estratégicas</h2>
-            <p class="proyecto__texto">Para transformar estos insights en impacto operativo, se proponen las siguientes
-                líneas de acción:</p>
-
-
-            <p class="proyecto__texto"><strong>1. Gestión Proactiva del Riesgo de Cancelación </strong></p>
-            <ul class="proyecto__lista">
-                <li class="proyecto__lista-item">Segmentación por Compromiso: Priorizar el seguimiento y contacto
-                    preventivo sobre aquellas reservas que
-                    combinan un alto lead time con cero requerimientos especiales, ya que representan el mayor riesgo de
-                    ocupación fantasma.</li>
-
-                <li class="proyecto__lista-item">
-                    Políticas de Depósito Dinámicas: Reforzar la exigencia de pagos anticipados o depósitos no
-                    reembolsables
-                    en los segmentos de mayor volatilidad, como el de "Groups", para estabilizar el flujo de caja.</li>
-
-                <p class="proyecto__texto"><strong>2. Optimización Comercial y Revenue Management</strong></p>
-                <ul class="proyecto__lista">
-                    <li class="proyecto__lista-item"> Blindaje de Canales Estables: Potenciar los canales corporativos y
-                        directos mediante beneficios
-                        exclusivos, dada su baja tasa de cancelación comparada con otros intermediarios. </li>
-
-                    <li class="proyecto__lista-item"> Overbooking Inteligente: Utilizar la probabilidad de cancelación
-                        detectada por segmento para implementar
-                        estrategias de sobreventa controlada, minimizando el costo de oportunidad de las habitaciones
-                        vacías. </li>
-
-                    <p class="proyecto__texto"><strong>3. Fidelización y Perfil de Cliente</strong></p>
-
-                    <ul class="proyecto__lista">
-                        <li class="proyecto__lista-item">Listas de Gestión Diferencial: Identificar de forma
-                            automatizada a clientes con historial de
-                            cancelaciones previas para aplicar condiciones de reserva más estrictas o requerir garantías
-                            adicionales. </li>
-
-                        <li class="proyecto__lista-item">Incentivos a la Reserva Cercana: Diseñar promociones de "último
-                            minuto" para reducir el promedio de lead
-                            time general, acortando la ventana de incertidumbre operativa. </li>
-
-                    </ul>
-        </section>
-
-        <section class="stack-proyecto">
-            <h2 class="proyecto__subtitulo">
-                Tecnologías Utilizadas
-            </h2>
-
-            <ul class="proyecto__texto">
-                <li>Python</li>
-                <li>Pandas</li>
-                <li>Matplotlib / Seaborn</li>
-                <li>Jupyter Notebook</li>
-                <li>Exploratory Data Analysis (EDA)</li>
-                <li>Feature Engineering</li>
-            </ul>
-
-        </section>
-
-        <div class="proyecto__enlaces">
-            <a class="proyecto__enlaces-link" href="https://github.com/JenniferFranco/hotel-cancellation-analysis/tree/main" target="_blank"> Ver Código
-                Completo en GitHub </a>
+        <dl class="ficha">
+          <div><dt>Tipo</dt><dd>Proyecto personal</dd></div>
+          <div><dt>Datos</dt><dd>119.390 reservas de un City Hotel y un Resort Hotel</dd></div>
+          <div><dt>Herramientas</dt><dd>Python, Pandas, Plotly, Seaborn, Jupyter Notebook</dd></div>
+        </dl>
+        <div class="botones caso-hero__acciones">
+          <a class="boton boton--lleno" href="https://github.com/JenniferFranco/hotel-cancellation-analysis" target="_blank" rel="noopener">Ver el código en GitHub<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
         </div>
+      </div>
+    </section>
 
-    </main>
+    <div class="caso">
+      <div class="contenedor">
 
-    <footer class="footer">
-        <p>© 2026 Jennifer Franco </p>
-    </footer>
+        <section class="caso__seccion" aria-labelledby="h-hallazgos">
+          <h2 id="h-hallazgos">Hallazgos</h2>
+          <ul class="hallazgos">
+            <li><strong>La anticipación es el factor principal</strong>Cuanto antes se reserva, más probable es que se cancele: la reserva queda abierta más tiempo.</li>
+            <li><strong>El historial se repite</strong>Los clientes que ya cancelaron antes tienden a volver a cancelar.</li>
+            <li><strong>Los pedidos especiales indican compromiso</strong>Quienes hacen 2 o más requerimientos especiales cancelan bastante menos.</li>
+            <li><strong>El precio no pesa</strong>No aparece una relación clara entre la tarifa (ADR) y la cancelación.</li>
+            <li><strong>Una anomalía en los datos</strong>Las tarifas "Non Refund" muestran un 99 % de cancelación, lo contrario de lo esperable. Apunta a un problema en la carga de datos o en la política comercial.</li>
+          </ul>
+        </section>
+
+        <section class="caso__seccion" aria-labelledby="h-graficos">
+          <h2 id="h-graficos">Los datos</h2>
+          <div class="figuras">
+            <figure class="figura">
+              <div class="figura__grafico"><iframe src="./assets/graficos_hotel/donas_cancelacion_total.html" title="Gráfico interactivo: distribución general de cancelaciones" loading="lazy"></iframe></div>
+              <figcaption><strong>Distribución general</strong>Más de un tercio de las reservas se cancela: no es un caso marginal sino parte del negocio.</figcaption>
+            </figure>
+            <figure class="figura">
+              <div class="figura__grafico"><iframe src="./assets/graficos_hotel/cancelaciones_por_tipo_hotel.html" title="Gráfico interactivo: estado de reserva según tipo de hotel" loading="lazy"></iframe></div>
+              <figcaption><strong>Por tipo de hotel</strong>El City Hotel cancela el 41,9 % de sus reservas; el Resort, el 28,0 %.</figcaption>
+            </figure>
+          </div>
+
+          <figure class="figura">
+            <div class="figura__grafico"><iframe src="./assets/graficos_hotel/lead_time.html" title="Gráfico interactivo: anticipación de reserva según estado" loading="lazy"></iframe></div>
+            <figcaption><strong>Anticipación de reserva</strong>Las reservas canceladas tienen una anticipación mucho mayor que las concretadas.</figcaption>
+          </figure>
+
+          <div class="figuras">
+            <figure class="figura">
+              <div class="figura__grafico"><iframe src="./assets/graficos_hotel/tipo_de_Deposito.html" title="Gráfico interactivo: tasa de cancelación según tipo de depósito" loading="lazy"></iframe></div>
+              <figcaption><strong>Tipo de depósito</strong>El 99 % de cancelación en "Non Refund" sugiere errores de carga o fallas en la política.</figcaption>
+            </figure>
+            <figure class="figura">
+              <div class="figura__grafico"><iframe src="./assets/graficos_hotel/segmento_de_mercado.html" title="Gráfico interactivo: tasa de cancelación por segmento de mercado" loading="lazy"></iframe></div>
+              <figcaption><strong>Segmento de mercado</strong>"Groups" cancela mucho más que el resto; "Undefined" también, posiblemente por datos inconsistentes.</figcaption>
+            </figure>
+          </div>
+
+          <figure class="figura">
+            <div class="figura__grafico"><iframe src="./assets/graficos_hotel/estacionalidad.html" title="Gráfico interactivo: evolución mensual de la tasa de cancelación" loading="lazy"></iframe></div>
+            <figcaption><strong>Evolución en el tiempo</strong>El City Hotel mantiene una tasa de cancelación más alta y más variable que el Resort durante todo el período.</figcaption>
+          </figure>
+
+          <div class="figuras">
+            <figure class="figura">
+              <div class="figura__grafico"><iframe src="./assets/graficos_hotel/requerimientos_extras.html" title="Gráfico interactivo: cancelación según requerimientos especiales" loading="lazy"></iframe></div>
+              <figcaption><strong>Requerimientos especiales</strong>A más pedidos especiales, menos cancelaciones.</figcaption>
+            </figure>
+            <figure class="figura">
+              <div class="figura__grafico"><iframe src="./assets/graficos_hotel/tipo_cliente.html" title="Gráfico interactivo: cancelación de clientes nuevos y recurrentes" loading="lazy"></iframe></div>
+              <figcaption><strong>Clientes recurrentes</strong>Los clientes que vuelven cancelan menos que los nuevos.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="caso__seccion" aria-labelledby="h-metodo">
+          <h2 id="h-metodo">Cómo preparé los datos</h2>
+          <h3>Limpieza</h3>
+          <ul class="lista">
+            <li>Eliminé la columna <code>company</code> por su alto porcentaje de datos faltantes.</li>
+            <li>Reemplacé valores nulos por categorías legibles ("Undefined") o por 0, según el caso.</li>
+            <li>Ajusté los tipos de datos para que fechas y categorías funcionaran bien en los cálculos.</li>
+          </ul>
+          <h3>Anomalías</h3>
+          <ul class="lista">
+            <li>Eliminé reservas con 0 adultos y cantidades imposibles de ocupantes o estacionamientos.</li>
+            <li>Quité tarifas negativas y valores extremos que distorsionaban los ingresos.</li>
+            <li>Conservé las reservas con mucha anticipación: son posibles y clave para entender el problema.</li>
+          </ul>
+          <h3>Variables nuevas</h3>
+          <ul class="lista">
+            <li><code>is_family</code>: distingue grupos con niños de viajeros solos o en pareja.</li>
+            <li><code>total_nights</code>: suma noches de semana y de fin de semana.</li>
+            <li><code>is_free</code>: identifica reservas sin costo, como cortesías o convenios.</li>
+          </ul>
+        </section>
+
+        <section class="caso__seccion" aria-labelledby="h-recomendaciones">
+          <h2 id="h-recomendaciones">Recomendaciones</h2>
+          <ul class="lista">
+            <li><strong>Seguimiento preventivo</strong> de las reservas con mucha anticipación y sin pedidos especiales, que son las de mayor riesgo.</li>
+            <li><strong>Depósitos según el segmento:</strong> exigir pago anticipado en los más volátiles, como "Groups".</li>
+            <li><strong>Potenciar los canales directos y corporativos</strong>, que cancelan menos.</li>
+            <li><strong>Sobreventa controlada</strong> usando la tasa de cancelación de cada segmento.</li>
+            <li><strong>Promociones de último momento</strong> para acortar la anticipación promedio.</li>
+            <li><strong>Revisar la carga de datos</strong> de "Non Refund" y "Undefined" antes de cualquier modelo predictivo.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <section class="cierre" aria-labelledby="h-cierre">
+      <div class="contenedor">
+        <h2 id="h-cierre" class="titulo-seccion">Más proyectos</h2>
+        <div class="botones">
+          <a class="boton boton--lleno" href="./proyecto-portal-rrhh.html">Portal web de RRHH</a>
+          <a class="boton boton--borde" href="./proyecto-rrhh.html">Retención de talento</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>© 2026 Jennifer Franco</p>
+    </div>
+  </footer>
 </body>
-
 </html>

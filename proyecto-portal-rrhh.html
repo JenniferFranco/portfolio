@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal web de RRHH | Jennifer Franco</title>
+  <meta name="description" content="Caso: portal web de indicadores de RRHH para dos empresas, con automatización de procesos y acceso por perfil.">
+  <meta name="theme-color" content="#5C2B50">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235C2B50'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='800' font-size='30' fill='%23C9D3BC' text-anchor='middle'%3EJF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,700..800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+  <link rel="stylesheet" href="./style/main.css">
+</head>
+
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado__fila">
+      <a class="marca" href="./index.html" aria-label="Jennifer Franco, inicio">JF</a>
+      <nav class="nav" aria-label="Principal">
+        <ul>
+          <li><a href="./index.html#proyectos">Proyectos</a></li>
+          <li><a href="./index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="caso-hero" aria-labelledby="titulo-caso">
+      <div class="contenedor">
+        <a class="caso-hero__volver" href="./index.html#proyectos">Volver a proyectos</a>
+        <h1 id="titulo-caso" class="caso-hero__titulo">Portal web de RRHH</h1>
+        <p class="bajada">Un portal interno que reemplazó planillas sueltas y reportes por mail con indicadores de personas actualizados, para RRHH y para cada gerencia.</p>
+
+        <ul class="cifras">
+                    <li class="cifra"><span class="cifra__valor">40 h/mes</span><span class="cifra__texto">de armado manual del control diario de ausentismo, reemplazadas por una sección del portal</span></li>
+          <li class="cifra"><span class="cifra__valor">~160</span><span class="cifra__texto">colaboradores de 2 empresas con sus indicadores en un mismo lugar</span></li>
+          <li class="cifra"><span class="cifra__valor">3 perfiles</span><span class="cifra__texto">de acceso: RRHH, gerencias y capacitadores</span></li>
+        </ul>
+
+        <dl class="ficha">
+          <div><dt>Mi rol</dt><dd>Diseño, desarrollo y mantenimiento, de punta a punta</dd></div>
+          <div><dt>Contexto</dt><dd>Área de RRHH de Districer, distribuidora oficial de Quilmes y Pepsi, 2026</dd></div>
+          <div><dt>Herramientas</dt><dd>Python (Pandas, Plotly), HTML, CSS, JavaScript, GitHub, Vercel, SharePoint</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="caso">
+      <div class="contenedor">
+
+        <section class="caso__seccion" aria-labelledby="h-problema">
+          <h2 id="h-problema">El problema</h2>
+          <p>Los datos de personas estaban repartidos entre exportes del sistema de RRHH, planillas de Excel y archivos que se mandaban por mail. Cada reporte se armaba a mano: sólo el control diario de ausentismo llevaba unas 2 horas por día.</p>
+          <p>Además, cada gerencia recibía la información tarde y sin poder filtrarla, y no había un criterio único para calcular indicadores como el ausentismo.</p>
+        </section>
+
+        <section class="caso__seccion" aria-labelledby="h-solucion">
+          <h2 id="h-solucion">Lo que construí</h2>
+          <p>Un portal web con una sección por tema y acceso según el perfil de quien entra. Esta maqueta muestra cómo se ve, con datos ficticios.</p>
+
+          <figure class="figura">
+            <div class="maqueta" role="img" aria-label="Maqueta del portal con datos ficticios: menú de secciones, indicadores de dotación, ausentismo y rotación, y un gráfico de ausentismo por sector.">
+              <div class="maqueta__barra" aria-hidden="true">
+                <span>Personas en foco</span>
+                <span class="maqueta__aviso">Datos ficticios</span>
+              </div>
+              <div class="maqueta__cuerpo" aria-hidden="true">
+                <ul class="maqueta__menu">
+                  <li>Dotación</li>
+                  <li>Rotación</li>
+                  <li aria-current="true">Ausentismo</li>
+                  <li>Capacitación</li>
+                  <li>Desempeño</li>
+                </ul>
+                <div class="maqueta__panel">
+                  <div class="maqueta__kpis">
+                    <div class="maqueta__kpi">Dotación<b>158</b></div>
+                    <div class="maqueta__kpi">Ausentismo<b>3,2 %</b></div>
+                    <div class="maqueta__kpi">Rotación<b>1,9 %</b></div>
+                  </div>
+                  <figure class="maqueta__grafico">
+                    <figcaption>Ausentismo por sector</figcaption>
+                    <ul class="barras">
+                      <li><span>Entrega</span><span class="barras__pista"><span class="barras__relleno" style="--valor: 78%"></span></span><span>4,1 %</span></li>
+                      <li><span>Almacén</span><span class="barras__pista"><span class="barras__relleno" style="--valor: 64%"></span></span><span>3,4 %</span></li>
+                      <li><span>Ventas</span><span class="barras__pista"><span class="barras__relleno" style="--valor: 47%"></span></span><span>2,5 %</span></li>
+                      <li><span>Administración</span><span class="barras__pista"><span class="barras__relleno" style="--valor: 30%"></span></span><span>1,6 %</span></li>
+                    </ul>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </figure>
+
+          <h3>Secciones del portal</h3>
+          <ul class="lista">
+            <li><strong>Dotación y rotación:</strong> organigrama, antigüedad, convenio, género, altas, bajas y motivos, con comparativo interanual.</li>
+            <li><strong>Ausentismo:</strong> un tablero diario por sector y un indicador mensual con el criterio de la metodología de gestión de la empresa, comparado con el año anterior.</li>
+            <li><strong>Capacitación:</strong> plan vs. dictado por pilar, participación y aprobación, y un buscador por colaborador.</li>
+            <li><strong>Desempeño:</strong> resultados de la evaluación de talento y planes de desarrollo individual.</li>
+          </ul>
+
+          <h3>Acceso por perfil</h3>
+          <p>RRHH ve todo; cada gerencia ve sólo su sector, con el detalle completo; quienes dictan capacitaciones ven el plan de capacitación.</p>
+        </section>
+
+        <section class="caso__seccion" aria-labelledby="h-funciona">
+          <h2 id="h-funciona">Cómo funciona</h2>
+          <ol class="flujo">
+            <li><strong>Fuentes</strong>Exportes del sistema de RRHH y planillas de registro, guardados en una carpeta compartida.</li>
+            <li><strong>Procesamiento</strong>Un notebook de Python lee las fuentes, aplica las reglas de cada indicador y detecta inconsistencias.</li>
+            <li><strong>Datos</strong>El notebook genera los archivos de datos que consume la web. La web no recalcula nada.</li>
+            <li><strong>Publicación</strong>El notebook sube los cambios a GitHub y Vercel publica la nueva versión.</li>
+          </ol>
+        </section>
+
+        <section class="caso__seccion" aria-labelledby="h-decisiones">
+          <h2 id="h-decisiones">Decisiones clave</h2>
+          <ul class="hallazgos">
+            <li><strong>Una única fuente de verdad</strong>Todos los cálculos viven en el notebook. Si un número cambia, cambia en un solo lugar.</li>
+            <li><strong>Criterios acordados antes que código</strong>Qué ausencias computan, cómo se cuenta la dotación o qué participación es válida se definió con las líderes de cada tema.</li>
+            <li><strong>Revisión humana donde hace falta</strong>Algunas clasificaciones de ausencias se revisan a mano antes de publicarse, porque el sistema de RRHH no registra todo lo necesario para decidirlas.</li>
+            <li><strong>Web en lugar de Power BI</strong>Llevar los tableros a la web me dio control total del diseño y de los accesos, sin licencias para cada usuario.</li>
+          </ul>
+        </section>
+
+        <section class="caso__seccion" aria-labelledby="h-aprendi">
+          <h2 id="h-aprendi">Lo que aprendí</h2>
+          <p>El mayor trabajo no estuvo en el código sino en ponerse de acuerdo sobre cómo se mide cada cosa. Un indicador con un criterio claro, aunque sea simple, sirve más que uno sofisticado que nadie entiende.</p>
+          <p>El próximo paso es que cada colaborador tenga su propio acceso para ver sus capacitaciones.</p>
+        </section>
+      </div>
+    </div>
+
+    <section class="cierre" aria-labelledby="h-cierre">
+      <div class="contenedor">
+        <h2 id="h-cierre" class="titulo-seccion">¿Te sirve algo así?</h2>
+        <div class="botones">
+          <a class="boton boton--lleno" href="./index.html#contacto">Contactarme</a>
+          <a class="boton boton--borde" href="./index.html#proyectos">Ver más proyectos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>© 2026 Jennifer Franco</p>
+    </div>
+  </footer>
+</body>
+</html>
